@@ -3,16 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --color-green:#2ecc71;
+    --color-red:#e74c3c;
+    --color-white:#ffffff;
+}
 body{
-    background-color:#47e288;
+    background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
     display:flex;
     justify-content:center;
-    align-items:flex-end;
+    align-items:center;
     overflow-y: hidden;
 }
-.content,.score {
-    margin:100px;
+.content{
+    margin:80px;
     padding:50px;
     width:30%;
     height:500px;
@@ -24,39 +28,98 @@ body{
     gap:40px;
 
 }
-
-.score{
-    display:none;
+.score {
+    transform:translateX(-100px);
+    visibility:hidden;
+    display:flex;
+    margin:80px;
+    padding:50px;
+    width:30%;
+    height:500px;
+    background-color:white;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:40px;
 }
 .forms{
     display:flex;
     flex-direction:column;
     width:100%;
+    
 }
 form{
     display:flex;
     flex-direction:column;
     width:100%;
+    gap: 20px;
 }
 
-h4{
+h1{
   text-align:center;
   font-size: 18px;
+   color:#555555;
 }
 p{
     text-align: center;
-    color:rgb(133, 130, 130);
+    color:#555555;
 }
-input[type="text"]{
-   width:100%;
-   height:40px;
-   outline:none;
+#email,#username{
+    font-family:"Inter";
+    font-style: normal;
+    font-weight:400mal;;
+    font-size: 16px;
+    line-height: 19px;
+    color:#555555;
+    width:100%;
+    height:40px;
+    outline:none;
+    
 }
 
-input[type="submit"]{
+.btnBegin{
+    font-family: "Inter";
+    font-weight: 500;
+    line-height:24.2px;
+    width:100%;
     height:40px;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color:white;
     background-color:rgb(0, 128, 0);
+    font-style: normal;
+    font-weight: 500;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.error{
+    border:1px solid var(--color-red);
+}
+.success{
+    border:1px solid var(--color-green);
+}
+small{
+    color:#e74c3c;
+}
+
+img{
+    width:90px;
+    height:90px;
+}
+
+.res{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:100%;
+    gap:100px;
+    padding:20px;
+    text-align:center;
+}
+.btnQuitteScore{
+    width:100%;
+    height:40px;
+    color:#FFFFFF;
+    background-color:blue;
+    font-size: 18px;
 }

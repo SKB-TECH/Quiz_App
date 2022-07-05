@@ -5,33 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/animation.css">
     <title>Quiz_App</title>
 </head>
 <body>
     <section id="main" class="content">
-        <h4 id="title">Javascript Quiz</h4>
-        <p>Evaluer vos connaissances en Javascript en <br>répondant aux questions que nous avons<br> specialement
-            sélectionnées
-          pour vous<br> c'est fun et gratuit</p>
+        <h1 id="title">Javascript Quiz</h1>
+        <p>Évaluez vos connaissances en JavaScript en répondant aux questions que nous avons spécialement sélectionnées pour vous.
+ C'est fun et c'est gratuit. </p>
         <div class="forms">
-            <form action="">
-                <label for="username">Nom</label><br>
-                <input type="text" id="username"><br>
-                <small id="snom"></small>
-                <label for="email">Email</label><br>
-                <input type="text" id="email"><br>
-                <small id="smail"></small>
-                <input type="submit" value="Commencer">
+            <form action="" id="formulaire">
+                <div>
+                    <label for="username">Nom</label><br>
+                    <input type="text" id="username" ><br>
+                    <small id="snom"></small>
+                </div>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email"><br>
+                    <small id="smail"></small>
+                </div>
+                <div class="button">
+                     <input type="submit" value="Commencer" class="btnBegin">
+                </div>
             </form>
         </div>
     </section>
     <section class="question">
-
     </section>
-
     <section class="score">
+        <div class="jouer">SHAKO KINYAMBA</div>
+        <div class="image">
+            <img src="./img/checked.png" alt="" srcset="image du resultat">
+        </div>
+       <div class="res">
+         <span>14/15</span>
+        <input type="submit" value="Accueil" class="btnQuitteScore">
+       </div>
+       
     </section>
 </body>
-<script src="./js/index.js"></script>
+<script src="./js/Validation.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/Question.js"></script>
 </html>
