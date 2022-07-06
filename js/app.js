@@ -1,3 +1,6 @@
+//import { Question } from "./Question.js";
+
+
 const user=document.querySelector("#username");
 const email=document.querySelector("#email");
 const formulaire=document.querySelector("#formulaire");
@@ -27,10 +30,16 @@ formulaire.addEventListener('submit',(e)=>{
     let val=verification.UsernameValidation()& verification.EmailValidation();
     
     if(val){
-        content.style.visibility="hidden"; 
-        score.style.visibility="visible";
-        score.style.transform="translateX(0px)";
-        score.style.transition="0.7s";
+        content.style.display="none"; 
+        
+        // score.style.display="flex";
+        // score.style.transform="translateX(0)";
+        // score.style.transition="0.6s";
+        question.style.display="flex";
+        question.style.transform="translateX(0)";
+        question.style.transition="0.6s";
+        
+        //console.log(Question)
     }
 })
 

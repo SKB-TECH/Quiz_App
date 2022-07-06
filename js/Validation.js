@@ -44,10 +44,10 @@ class Validation {
         let val = false;
         if (!this.isEmptyUsername()) {
 
-            this.AfficherErreur("#username","your name is empty.","#snom");
+            this.AfficherErreur("#username","n'oubliez pas de renseigne votre nom.","#snom");
         }
         else if (!this.isLengthUsername()) {
-            this.AfficherErreur("#username",`username must be betwen 5 and 25 characters`,"#snom");
+            this.AfficherErreur("#username",`le nom doit avoit entre 5 et 25 caracters`,"#snom");
         }
         else {
             this.AfficherValidation("#username","#snom")
@@ -60,10 +60,10 @@ class Validation {
         let val = false;
         if (!this.isEmptyEmail()) 
         {
-            this.AfficherErreur("#email","your email adress is empty",'#smail');
+            this.AfficherErreur("#email","n'oubliez de renseigne votre adresse email",'#smail');
         }
         else if(!this.isValidEmasil()){
-            this.AfficherErreur("#email","your email adress is incoorect","#smail")
+            this.AfficherErreur("#email","votre adresse email est incorrect","#smail")
         }
         else {
             this.AfficherValidation("#email","#smail")

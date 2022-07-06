@@ -17,7 +17,7 @@ body{
 }
 .content{
     margin:80px;
-    padding:50px;
+    padding:40px;
     width:30%;
     height:500px;
     background-color:white;
@@ -29,11 +29,24 @@ body{
 
 }
 .score {
-    transform:translateX(-100px);
-    visibility:hidden;
-    display:flex;
+    transform:translateX(-200px);
+    display:none;
     margin:80px;
     padding:50px;
+    width:30%;
+    height:500px;
+    background-color:white;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:40px;
+}
+.question{
+    box-sizing: border-box;
+    transform:translateX(-100px);
+    display:none;
+    margin:80px;
+    padding:20px;
     width:30%;
     height:500px;
     background-color:white;
@@ -76,12 +89,17 @@ p{
     outline:none;
     
 }
-
+.button{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
 .btnBegin{
     font-family: "Inter";
     font-weight: 500;
     line-height:24.2px;
-    width:100%;
+    width:226px;
     height:40px;
     text-align: center;
     font-size: 20px;
@@ -89,7 +107,8 @@ p{
     background-color:rgb(0, 128, 0);
     font-style: normal;
     font-weight: 500;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px #f8f6f6f5);
+
 }
 
 .error{
@@ -112,7 +131,7 @@ img{
     flex-direction:column;
     justify-content:space-between;
     width:100%;
-    gap:100px;
+    gap:40px;
     padding:20px;
     text-align:center;
 }
@@ -120,6 +139,74 @@ img{
     width:100%;
     height:40px;
     color:#FFFFFF;
-    background-color:blue;
+    background-color:#1E90FF;
     font-size: 18px;
+}
+.btn{
+    width:100%;
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    grid-row-end: span;
+}
+.btnQuitter{
+    width:100%;
+    height:40px;
+    color:#FFFFFF;
+    background-color:#ff8b1e;
+    font-size: 18px;
+    border:none;
+    box-shadow: 3px 3px 5px  rgba(0, 0, 0,0.5);
+}
+.btnSuivant{
+    width:100%;
+    height:40px;
+    color:#FFFFFF;
+    background-color:rgb(0, 128, 0);;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px  rgba(0, 0, 0,0.5);
+    border:none;
+}
+/* formulaire questions*/
+.option{
+    font-size:1.4rem;
+    margin:5px 0 0 5px;
+    padding:10px;
+    transition: .5s ease background-color;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:stretch;
+    cursor: pointer;
+    border:1px solid rgb(212, 211, 208);
+    color:#555555;
+}
+
+form .option label{
+    width: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+    justify-content:stretch;
+    height: 20px;
+    color:#555555;
+}
+
+form .option:hover{
+    background-color:#e2e4e3;
+}
+.notice{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.m{
+    color:#555555;
+    font-style: 14px;
+}
+.Q{
+    text-align: left;
+    color:#555555;
+    font-size:14px;
 }
