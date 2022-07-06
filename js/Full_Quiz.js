@@ -1,4 +1,4 @@
-export const Full_Quiz = [
+export  const Full_Quiz = [
   //question 1
   {
     titre: "Quelle est l'extension des fichiers Javascript ?",

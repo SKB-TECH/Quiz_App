@@ -1,17 +1,20 @@
-//import { Question } from "./Question.js";
+//on importe le module contenant les questions depuis le fichier Full_Quiz.js
+import {Full_Quiz} from './Full_Quiz.js'
 
-
+//on selectionner les objects html
 const user=document.querySelector("#username");
 const email=document.querySelector("#email");
 const formulaire=document.querySelector("#formulaire");
+
+//on instencie notre classe Validation
 const verification=new Validation(user,email);
 
-//les sections a appelles
+//on selectionner nos differentes section html
 const score = document.querySelector('.score');
 const content=document.querySelector('.content');
 const question = document.querySelector('.question');
 
-
+//selection input et on met l'evenement sur input pour valide la saisie
 formulaire.addEventListener("input", (e)=>{
     switch(e.target.id){
         case "username":
@@ -24,6 +27,7 @@ formulaire.addEventListener("input", (e)=>{
     }
 })
 
+// on ajoute l'evenement sur le formulaire au moment de submit
 formulaire.addEventListener('submit',(e)=>{
     
     e.preventDefault();
@@ -31,16 +35,13 @@ formulaire.addEventListener('submit',(e)=>{
     
     if(val){
         content.style.display="none"; 
-        
-        // score.style.display="flex";
-        // score.style.transform="translateX(0)";
-        // score.style.transition="0.6s";
         question.style.display="flex";
         question.style.transform="translateX(0)";
         question.style.transition="0.6s";
-        
-        //console.log(Question)
-    }
+    }//
+
+// ajout des question dans le formulaire
+
 })
 
 

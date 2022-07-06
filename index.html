@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css?t=<?php echo tim() ?> "/>
     <title>Quiz_App</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="main" class="content">
-        <h1 id="title">Javascript Quiz</h1>
-        <p>Évaluez vos connaissances en JavaScript en répondant aux questions que nous avons spécialement sélectionnées pour vous.
- C'est fun et c'est gratuit. </p>
-        <div class="forms">
-            <form action="" id="formulaire">
-                <div>
-                    <label for="username">Nom</label><br>
-                    <input type="text" id="username" ><br>
-                    <small id="snom"></small>
-                </div>
-                <div>
-                    <label for="email">Email</label><br>
-                    <input type="text" id="email"><br>
-                    <small id="smail"></small>
-                </div>
-                <div class="button">
-                     <input type="submit" value="Commencer" class="btnBegin">
-                </div>
-            </form>
-        </div>
+      <h1 id="title">Javascript Quiz</h1>
+      <p>
+        Évaluez vos connaissances en JavaScript en répondant aux questions que
+        nous avons spécialement sélectionnées pour vous. C'est fun et c'est
+        gratuit.
+      </p>
+      <div class="forms">
+        <form action="" id="formulaire">
+          <div>
+            <label for="username">Nom</label><br />
+            <input type="text" id="username" /><br />
+            <small id="snom"></small>
+          </div>
+          <div>
+            <label for="email">Email</label><br />
+            <input type="text" id="email" /><br />
+            <small id="smail"></small>
+          </div>
+          <div class="button">
+            <input type="submit" value="Commencer" class="btnBegin" />
+          </div>
+        </form>
+      </div>
     </section>
     <section class="question">
-        <form action="">
-            <h1 class="Quiz">Quel est le type des fichiers Javascript  </h1>
-        <div class="notice">
-            <h3 class="Q">Question 7/15</h3>
-            <h4 class="m">60m</h4>
+      <form action="" id="Form_Quiz">
+        <h1 class="Quiz">Quel est le type d'un fichier Javascript</h1>
+        <div class="option1">
+          <h4 class="Q">Question 7/15</h4>
+          <h4 class="m">60</h4>
         </div>
-        <div class="progressbar">
+        <div class="option2"></div>
+        <div class="option">
+          <input type="radio" name="reponse" id=".py" class="radio"/>
+          <label for=".py">.py</label>
         </div>
-         <div class="option">
-            <input type="radio" name="reponse" id=".py">
-            <label for=".py">.py</label>
-         </div>
-         <div class="option">
-            <input type="radio" name="reponse" id=".php">
-           <label for=".php">.php</label>
-         </div>
-           <div class="option">
-            <input type="radio" name="reponse" id=".js">
-           <label for=".js">.js</label>
-           </div>
-           <div class="option">
-            <input type="radio" name="reponse" id=".java">
-           <label for=".java">.java</label>
-           </div>
-       <div class="btn">
-        <input type="submit" value="Quitter" class="btnQuitter">
-        <input type="submit" value="Suivant" class="btnSuivant">
-       </div>
-        </form>
+        <div class="option">
+          <input type="radio" name="reponse" id=".php" class="radio"/>
+          <label for=".php">.php</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="reponse" id=".js"class="radio" />
+          <label for=".js">.js</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="reponse" id=".java" class="radio"/>
+          <label for=".java">.java</label>
+        </div>
+        <div class="btn">
+          <input type="submit" value="Quitter" class="btnQuitter" />
+          <input type="submit" value="Suivant" class="btnSuivant" />
+        </div>
+      </form>
     </section>
 
     <section class="score">
-        <div class="jouer"><h1>SHAKO KINYAMBA</h1></div>
-        <div class="jouer">shakokinyamba201@gmail.com</div>
-        <div class="image">
-            <img src="./img/checked.png" alt="" srcset="image du resultat">
-        </div>
-       <div class="res">
-         <span>14/15</span>
-        <input type="submit" value="Accueil" class="btnQuitteScore">
-       </div>
+      <div class="jouer"><h1>SHAKO KINYAMBA</h1></div>
+      <div class="jouer">shakokinyamba201@gmail.com</div>
+      <div class="image">
+        <img src="./img/checked.png" alt="" srcset="image du resultat" />
+      </div>
+      <div class="res">
+        <span>14/15</span>
+        <input type="submit" value="Accueil" class="btnQuitteScore" />
+      </div>
     </section>
-</body>
-<script src="./js/Validation.js"></script>
-<script src="./js/app.js"></script>
-<!-- <script type="module" src="./js/Question.js"></script> -->
+  </body>
+  <script src="./js/Validation.js"></script>
+  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/Full_Quiz.js"></script>
 </html>
