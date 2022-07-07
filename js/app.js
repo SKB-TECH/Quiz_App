@@ -1,5 +1,8 @@
-//on importe le module contenant les questions depuis le fichier Full_Quiz.js
-import {Full_Quiz} from './Full_Quiz.js'
+//on importe la classe pour verifier la saisie
+import {questions} from './Classes/DataSet.js'
+import {Validation} from './Classes/Validation.js';
+import { Compteur } from './Classes/Compteur.js';
+import {nouveauQuestion} from './Classes/Melange.js';
 
 //on selectionner les objects html
 const user=document.querySelector("#username");
@@ -39,10 +42,19 @@ formulaire.addEventListener('submit',(e)=>{
         question.style.transform="translateX(0)";
         question.style.transition="0.6s";
     }//
-
-// ajout des question dans le formulaire
-
 })
+
+function main(){
+    const quiz=new Compteur(questions);
+    //console.log(quiz);
+    console.log(quiz.Suivant(".js"));
+}
+
+main();
+
+
+
+
 
 
 

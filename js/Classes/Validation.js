@@ -1,4 +1,4 @@
-class Validation {
+export class Validation {
     constructor(username,email) {
         this.username = username;
         this.email = email;
