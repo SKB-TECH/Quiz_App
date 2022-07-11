@@ -6,7 +6,6 @@ import { Validation } from './Classes/Validation.js';
 // identite de l'utilisateur
 const nom = document.querySelector('.nom')
 const adres = document.querySelector('.adresse')
-
 //on selectionner les objects html
 const user = document.querySelector("#username");
 const email = document.querySelector("#email");
