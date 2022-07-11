@@ -188,14 +188,8 @@ function resultat(x) {
 }
 
 // bouton 
-retour.addEventListener('click', (e) => {
-    ClearFunction()
-    Chargement()
-    user.value=''
-    email.value=''
-    questionnaire.style.display = "none";
-    score.style.display = "none";
-    content.style.display = "flex";
+score.addEventListener('click', (e) => {
+    location.reload()
 })
 
 function ClearFunction() {
