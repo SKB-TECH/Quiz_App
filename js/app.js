@@ -49,27 +49,21 @@ const points = document.querySelector('.points');
 //initialisation de quelques variables 
 let index = 0;
 let times = 0;
-let interval = 60;
 let cote = 0;
-
+let sc=6
 //pour le timing et le progressbar
 const Compteur = () => {
-   let interval=32;
-   let sc=60
    let compte=setInterval(()=>{
-        
-        let longeur=interval/10*100
-        if(interval != 0){
-            interval--;
+        if(sc > 0){
             sc--;
-            bar.style.width=longeur+"px";
+            bar.style.width=sc*(100/60)+"%";
             time.textContent=sc;
         }
-        else{
-
-            ClearFunction()
-            Chargement()
-            clearInterval(compte);
+        else if(sc===0)
+        {
+            Chargement();
+            index++;
+            sc=60;
         }
    },1000)
 }
@@ -114,10 +108,12 @@ formulaire.addEventListener('submit', (e) => {
         content.style.display = "none";
         questionnaire.style.display = "flex";
         Chargement();
+        index++;
+        sc=60;
+        Compteur();
         questionnaire.style.transform = "translateX(0)";
         questionnaire.style.transition = "3s";
-    
-        //Compteur();
+        
     }//
 });
 // btn next
@@ -127,6 +123,7 @@ formQuiz.addEventListener('submit', (e) => {
     //ajout de l;evenement sur le btn suivant{
     if (index !== question.length-1) {
         index++;
+        sc=60;
     }
     ///Compteur();
     ClearFunction();
