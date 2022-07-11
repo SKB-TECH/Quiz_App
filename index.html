@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css?t=<?php echo tim() ?> "/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animation.css">
     <title>Quiz_App</title>
   </head>
   <body>
@@ -35,48 +36,75 @@
     </section>
     <section class="question">
       <form action="" id="Form_Quiz">
-        <h1 class="Quiz">Quel est le type d'un fichier Javascript</h1>
+       <div><h1 id="Question" class="Quiz"></h1></div> 
         <div class="option1">
-          <h4 class="Q">Question 7/15</h4>
-          <h4 class="m">60</h4>
+          <smail class="Q"></smail>
+          <small class="m" id="time"></small>
         </div>
-        <div class="option2"></div>
-        <div class="option">
-          <input type="radio" name="reponse" id=".py" class="radio"/>
-          <label for=".py">.py</label>
+        <div id="progresse">
+          <div id="bar"></div>
         </div>
-        <div class="option">
-          <input type="radio" name="reponse" id=".php" class="radio"/>
-          <label for=".php">.php</label>
-        </div>
-        <div class="option">
-          <input type="radio" name="reponse" id=".js"class="radio" />
-          <label for=".js">.js</label>
-        </div>
-        <div class="option">
-          <input type="radio" name="reponse" id=".java" class="radio"/>
-          <label for=".java">.java</label>
+        <div class="quiz">
+          <!-- pour les question provenant du js -->
+          <div class="option">
+            <input
+              type="radio"
+              value=".php"
+              name="reponse"
+              id="a"
+              class="choix"
+            />
+            <label class="la" for="a"></label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              value=".jpeg"
+              name="reponse"
+              id="b"
+              class="choix"
+            />
+            <label class="lb" for="b"></label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              value=".js"
+              name="reponse"
+              id="c"
+              class="choix"
+            />
+            <label class="lc" for="c"></label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              value=".class"
+              name="reponse"
+              id="d"
+              class="choix"
+            />
+            <label class="ld" for="d"></label>
+          </div>
         </div>
         <div class="btn">
           <input type="submit" value="Quitter" class="btnQuitter" />
-          <input type="submit" value="Suivant" class="btnSuivant" disabled value="btnSuivant"/>
+          <input type="submit" value="Suivant" class="btnSuivant" disabled />
         </div>
       </form>
     </section>
 
     <section class="score">
-      <div class="jouer"><h1>SHAKO KINYAMBA</h1></div>
-      <div class="jouer">shakokinyamba201@gmail.com</div>
+      <div class="nom"><h1>SHAKO KINYAMBA</h1></div>
+      <div class="adresse">shakokinyamba201@gmail.com</div>
       <div class="image">
-        <img src="./img/checked.png" alt="" srcset="image du resultat" />
+        <img src="./img/checked.png" alt="image du resultat" id="imgs" />
       </div>
       <div class="res">
-        <span>14/15</span>
+        <span class="points">14/15</span>
         <input type="submit" value="Accueil" class="btnQuitteScore" />
       </div>
     </section>
   </body>
-  <script type="module" src="./js/Classes/Validation.js"></script>
   <script type="module" src="./js/app.js"></script>
-
 </html>
