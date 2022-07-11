@@ -57,12 +57,21 @@ const Compteur = () => {
             sc--;
             bar.style.width=sc*(100/60)+"%";
             time.textContent=sc;
+
+            console.log(bar.style.width ,index)
         }
-        else if(sc===0)
+        else if(index===15 && bar.style.width===0+"%")
+        {
+            questionnaire.style.display="none"
+            resultat(cote)
+            score.style.display="flex";
+        }
+        else if(index<=15 && bar.style.width>=0+"%")
         {
             Chargement();
             index++;
             sc=60;
+            
         }
    },1000)
 }
@@ -124,9 +133,11 @@ formQuiz.addEventListener('submit', (e) => {
         index++;
         sc=60;
     }
+   
     ///Compteur();
     ClearFunction();
     Chargement();
+    
     if(index===15){
         suivant.value="Terminer"
         suivant.addEventListener('click',()=>{
@@ -135,6 +146,7 @@ formQuiz.addEventListener('submit', (e) => {
             score.style.display="flex";
         })
     }
+   
 });
 
 //})
