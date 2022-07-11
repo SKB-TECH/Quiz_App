@@ -16,6 +16,7 @@ body {
     align-items: center;
     overflow-y: hidden;
     font-family: 'Inter';
+    box-sizing: border-box;
 }
 
 .content {
@@ -297,6 +298,8 @@ form .option input[type="radio"]:hover {
     top: 10px;
     font-size: 14px;
     color: #555555;
+    min-width:2px;
+    max-height: 4px;
 }
 /* Animation pour l'image de la fin  */
 #imgs{
