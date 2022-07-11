@@ -20,10 +20,11 @@ body {
 }
 
 .content {
-    margin: 80px;
+    margin: auto;
+    margin-top: 10%;
     padding: 40px;
-    width: 30%;
-    height: 500px;
+    width: 380px;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -35,10 +36,11 @@ body {
 
 .score {
     display: none;
-    margin: 80px;
+    margin: auto;
+    margin-top: 10%;
     padding: 50px;
-    width: 30%;
-    height: 500px;
+    width: 380px;
+    height: fit-content;
     background-color: white;
     flex-direction: column;
     justify-content: flex-start;
@@ -51,10 +53,11 @@ body {
     box-sizing: border-box;
     transform: translateX(-100px);
     display: none;
-    margin: 80px;
+    margin: auto;
+    margin-top: 10%;
     padding: 20px;
-    width: 30%;
-    height: 500px;
+    width: 380px;
+    height: fit-content;
     background-color: white;
     flex-direction: column;
     justify-content: flex-start;
@@ -323,5 +326,13 @@ form .option input[type="radio"]:hover {
     100%{
         transform: translateY(0px) scale(1) rotate(360deg);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .content,.question,.score{
+        box-sizing: border-box;
+        margin:20px;
+        width: 300px;
     }
 }
